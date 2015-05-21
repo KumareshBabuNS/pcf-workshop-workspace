@@ -28,4 +28,8 @@ public class CitiesController {
     public PagedCities search(@RequestParam("name") String name, Pageable pageable) {
         return repository.findByNameContains(name, pageable.getPageNumber(), pageable.getPageSize());
     }
+    @RequestMapping(value = "/version", method = RequestMethod.GET)
+    public String version() {
+        return System.getenv("VERSION");
+    }
 }
