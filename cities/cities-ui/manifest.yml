@@ -7,3 +7,4 @@ applications:
   services: [ <YOUR INITIALS>-cities-ws ]
   env:
     SPRING_PROFILES_ACTIVE: cloud
+    VERSION: 1001
